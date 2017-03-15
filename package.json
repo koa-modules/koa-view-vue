@@ -1,0 +1,35 @@
+{
+  "name": "koa-view-vue",
+  "version": "0.0.1",
+  "description": "koa vue template engine",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "mocha test/*.js"
+  },
+  "repository": "koa-modules/koa-view-vue",
+  "keywords": [
+    "server",
+    "render",
+    "koa",
+    "vue"
+  ],
+  "author": "haoxin",
+  "license": "MIT",
+  "dependencies": {
+    "babel-core": "6",
+    "babel-preset-latest": "6",
+    "balanced-match": "0",
+    "lru-cache": "4",
+    "mz": "2",
+    "require-from-string": "1",
+    "vue": "2",
+    "vue-server-renderer": "2"
+  },
+  "devDependencies": {
+    "koa": "2",
+    "koa-static-cache": "4",
+    "lodash.template": "^4.4.0",
+    "mocha": "3",
+    "supertest": "3"
+  }
+}

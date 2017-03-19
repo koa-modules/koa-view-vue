@@ -1,6 +1,7 @@
 
 const { deepEqual, equal } = require('assert')
 const request = require('supertest')
+const cheerio = require('cheerio')
 const Koa = require('koa')
 const Vue = require('vue')
 
@@ -39,27 +40,23 @@ describe('basic', () => {
     }))
 
     app.use(async ctx => {
-      ctx.body = await ctx.renderBundle('build.server.js')
+      ctx.body = await ctx.renderBundle('build.server.js', {
+        fooCount: 99,
+        barCount: 98,
+        count: 97
+      })
     })
 
     it('should OK', async () => {
-      const expectHtml = `<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>vue server render bundle</title>
-  </head>
-  <body>
-    <main server-rendered="true"><h1>hello</h1> <h2>world</h2> <h3>0</h3></main>
-    <script src="/dist/build.js"></script>
-  </body>
-</html>
-`
       const res = await request(app.listen())
-        .get('/')
+        .get('/ssr')
         .expect(200)
 
-      equal(res.text, expectHtml)
+      const $ = cheerio.load(res.text)
+
+      equal($('main > section > div').first().text().trim(), '99')
+      equal($('main > section > div').last().text().trim(), '98')
+      equal($('footer').text().trim(), '97')
     })
   })
 })

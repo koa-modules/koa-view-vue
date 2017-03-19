@@ -1,40 +1,54 @@
 
 <template>
   <main>
-    <h1>{{ foo }}</h1>
-    <h2>{{ bar }}</h2>
-    <h3>{{ count }}</h3>
+    <header>
+      hello, vue !
+    </header>
+    <section>
+      <h3>foo init: {{ fooCount }}</h3>
+      <foo :count="fooCount"></foo>
+    </section>
+    <section>
+      <h3>bar init: {{ barCount }}</h3>
+      <bar :count="barCount"><bar>
+    </section>
+    <footer>
+      {{ count }}
+    </footer>
   </main>
 </template>
 
 <script>
 
+import Bar from './bar'
+import Foo from './foo'
+
 export default {
   name: 'app',
-  data: function() {
+  components: {
+    Foo,
+    Bar
+  },
+  data() {
     return {
-      foo: 'hello',
-      bar: 'world',
+      fooCount: 2,
+      barCount: 1,
       count: 0
     }
   },
-  created: function() {
+  created() {
     setInterval(() => {
       this.count += 1
-    }, 1000)
+    }, 1100)
   }
 }
 
 </script>
 
-<style>
+<style scoped>
 
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+main {
+  display: grid;
 }
 
 </style>

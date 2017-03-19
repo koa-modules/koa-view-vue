@@ -11,7 +11,7 @@
 <script>
 
 export default {
-  data: function() {
+  data() {
     return {
       title: 'Hello, world !',
       message: 'foo',
@@ -22,5 +22,5 @@ export default {
 
 </script>
 
-<style lang="css">
+<style>
 </style>

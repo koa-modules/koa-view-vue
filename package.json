@@ -1,6 +1,6 @@
 {
   "name": "koa-view-vue",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "koa vue template engine",
   "main": "lib/index.js",
   "scripts": {
@@ -26,6 +26,7 @@
     "vue-server-renderer": "2"
   },
   "devDependencies": {
+    "cheerio": "^0.22.0",
     "koa": "2",
     "koa-static-cache": "4",
     "lodash.template": "^4.4.0",

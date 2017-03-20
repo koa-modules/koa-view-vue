@@ -11,11 +11,15 @@ app.use(serve('.'))
 app.use(vueView({
   layout: 'layout.html',
   root: __dirname,
-  cache: false
+  cache: false,
+  bundleOptions: {
+    catch: true,
+    ext: 'server.json'
+  }
 }))
 
 app.use(async ctx => {
-  ctx.body = await ctx.renderBundle('dist/build.server.js', {
+  ctx.body = await ctx.renderBundle('dist/main', {
     fooCount: 99,
     barCount: 98,
     count: 97

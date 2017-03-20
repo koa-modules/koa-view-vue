@@ -36,11 +36,16 @@ describe('basic', () => {
     app.use(vueView({
       layout: '../layout.html',
       root: 'example/dist',
-      cache: false
+      cache: false,
+      bundleOptions: {
+        ext: 'server.json',
+        cache: true
+      }
     }))
 
     app.use(async ctx => {
-      ctx.body = await ctx.renderBundle('build.server.js', {
+      ctx.body = await ctx.renderBundle('main', {
+        title: 'hello, vue ssr !',
         fooCount: 99,
         barCount: 98,
         count: 97
@@ -53,6 +58,8 @@ describe('basic', () => {
         .expect(200)
 
       const $ = cheerio.load(res.text)
+
+      equal($('head > title').text().trim(), 'hello, vue ssr !')
 
       equal($('main > section > div').first().text().trim(), '99')
       equal($('main > section > div').last().text().trim(), '98')

@@ -1,4 +1,5 @@
 
+const VueSSRPlugin = require('vue-ssr-webpack-plugin')
 const { resolve } = require('path')
 const webpack = require('webpack')
 
@@ -7,9 +8,9 @@ module.exports = {
   entry: './main.server.js',
   output: {
     path: resolve(__dirname, './dist'),
-    libraryTarget: 'umd', // 'commonjs2',
+    libraryTarget: 'commonjs2',
     publicPath: '/dist/',
-    filename: 'build.server.js'
+    filename: '[name].server.js'
   },
   module: {
     rules: [{
@@ -34,5 +35,10 @@ module.exports = {
   performance: {
     hints: false
   },
-  devtool: '#eval-source-map'
+  devtool: '#eval-source-map',
+  plugins: [
+    new VueSSRPlugin({
+      filename: 'main.server.json'
+    })
+  ]
 }

@@ -7,9 +7,7 @@ const app = new Vue({
   ...App,
   data() {
     return {
-      fooCount: 69,
-      barCount: 68,
-      count: 67
+      ...window._vue_ssr_data_
     }
   }
 })

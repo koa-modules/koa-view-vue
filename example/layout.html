@@ -4,11 +4,11 @@
     <meta charset="utf-8">
     <title>${ title }</title>
     <script>
-      window._vue_ssr_data_ = ${ _vue_ssr_data_ }
+      window._vue_ssr_data_ = ${ JSON.stringify(_vue_ssr_data_) }
     </script>
   </head>
   <body>
     ${ _vue_ssr_html_ }
-    <script src="/dist/build.js"></script>
+    <script src="/dist/main.js"></script>
   </body>
 </html>

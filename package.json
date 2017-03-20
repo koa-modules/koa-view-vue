@@ -19,6 +19,7 @@
     "babel-core": "6",
     "babel-preset-latest": "6",
     "balanced-match": "0",
+    "lodash.template": "4",
     "lru-cache": "4",
     "mz": "2",
     "require-from-string": "1",

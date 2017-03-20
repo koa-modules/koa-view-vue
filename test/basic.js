@@ -44,7 +44,7 @@ describe('basic', () => {
     }))
 
     app.use(async ctx => {
-      ctx.body = await ctx.renderBundle('main', {
+      await ctx.renderBundle('main', {
         title: 'hello, vue ssr !',
         fooCount: 99,
         barCount: 98,

@@ -19,7 +19,12 @@ app.use(vueView({
 }))
 
 app.use(async ctx => {
-  ctx.body = await ctx.renderBundle('dist/main', {
+  if (ctx.path !== '/') {
+    return
+  }
+
+  await ctx.renderBundle('dist/main', {
+    title: 'hi, vue !',
     fooCount: 99,
     barCount: 98,
     count: 97

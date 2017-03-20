@@ -1,6 +1,6 @@
 
 <template>
-  <main>
+  <main id="app">
     <header>
       hello, vue !
     </header>

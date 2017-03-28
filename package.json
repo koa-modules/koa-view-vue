@@ -4,7 +4,7 @@
   "description": "koa vue template engine",
   "main": "lib/index.js",
   "scripts": {
-    "test": "mocha test/*.js"
+    "test": "make build && mocha test/*.js"
   },
   "repository": "koa-modules/koa-view-vue",
   "keywords": [

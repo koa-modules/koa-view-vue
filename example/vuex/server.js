@@ -2,7 +2,7 @@
 const serve = require('koa-static')
 const Koa = require('koa')
 
-const vueView = require('..')
+const vueView = require('../../')
 
 const app = new Koa()
 
@@ -25,8 +25,6 @@ app.use(async ctx => {
 
   await ctx.renderBundle('dist/main', {
     title: 'hi, vue !',
-    fooCount: 99,
-    barCount: 98,
     count: 97
   })
 })

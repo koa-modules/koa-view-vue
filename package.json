@@ -13,6 +13,9 @@
     "koa",
     "vue"
   ],
+  "files": [
+    "lib/"
+  ],
   "author": "haoxin",
   "license": "MIT",
   "dependencies": {
@@ -27,12 +30,27 @@
     "vue-server-renderer": "2"
   },
   "devDependencies": {
-    "cheerio": "^0.22.0",
+    "babel-core": "6",
+    "babel-loader": "6",
+    "babel-plugin-transform-object-rest-spread": "6",
+    "babel-preset-env": "1",
+    "cheerio": "0",
+    "css-loader": "0",
+    "eslint-config-ok": "github:haoxins/eslint-config",
     "koa": "2",
     "koa-static-cache": "4",
-    "lodash.template": "^4.4.0",
+    "lodash.template": "4",
     "mocha": "3",
     "supertest": "3",
-    "vue-ssr-webpack-plugin": "1"
+    "vue-loader": "11",
+    "vue-ssr-webpack-plugin": "1",
+    "vue-template-compiler": "2",
+    "webpack": "2",
+    "webpack-dev-server": "2"
+  },
+  "eslintConfig": {
+    "extends": [
+      "ok"
+    ]
   }
 }

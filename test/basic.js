@@ -35,7 +35,7 @@ describe('basic', () => {
 
     app.use(vueView({
       layout: '../layout.html',
-      root: 'example/dist',
+      root: 'example/simple/dist',
       cache: false,
       bundleOptions: {
         ext: 'server.json',

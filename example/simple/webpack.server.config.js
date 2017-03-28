@@ -1,7 +1,6 @@
 
 const VueSSRPlugin = require('vue-ssr-webpack-plugin')
 const { resolve } = require('path')
-const webpack = require('webpack')
 
 module.exports = {
   target: 'node',

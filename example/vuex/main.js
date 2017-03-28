@@ -1,15 +1,13 @@
 
 import App from './component/app'
-
+import store from './store'
 import Vue from 'vue'
+
+store.replaceState(window._vue_ssr_data_)
 
 const app = new Vue({
   ...App,
-  data() {
-    return {
-      ...window._vue_ssr_data_
-    }
-  }
+  store
 })
 
 app.$mount('#app')

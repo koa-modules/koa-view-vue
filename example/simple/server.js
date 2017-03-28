@@ -2,7 +2,7 @@
 const serve = require('koa-static')
 const Koa = require('koa')
 
-const vueView = require('..')
+const vueView = require('../../')
 
 const app = new Koa()
 

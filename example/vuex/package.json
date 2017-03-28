@@ -1,27 +1,16 @@
 {
-  "name": "vuex",
+  "name": "vuex-example",
   "private": true,
   "version": "1.0.0",
   "scripts": {
-    "start": "cross-env NODE_ENV=development webpack-dev-server --open --hot",
-    "build": "cross-env NODE_ENV=production webpack --progress --hide-modules",
-    "build-server": "cross-env NODE_ENV=production webpack --config webpack.server.config --progress --hide-modules"
+    "start": "NODE_ENV=development webpack-dev-server --open --hot",
+    "build": "NODE_ENV=production webpack",
+    "build-server": "NODE_ENV=production webpack --config webpack.server.config"
   },
   "dependencies": {
     "koa-static": "3",
     "lru-cache": "4",
-    "vue": "2"
-  },
-  "devDependencies": {
-    "babel-core": "6",
-    "babel-loader": "6",
-    "babel-plugin-transform-object-rest-spread": "6",
-    "babel-preset-env": "^1.2.1",
-    "cross-env": "3",
-    "css-loader": "0",
-    "vue-loader": "11",
-    "vue-template-compiler": "2",
-    "webpack": "2",
-    "webpack-dev-server": "2"
+    "vue": "2",
+    "vuex": "2"
   }
 }

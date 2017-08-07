@@ -8,8 +8,6 @@
     "build-server": "NODE_ENV=production webpack --config webpack.server.config"
   },
   "dependencies": {
-    "koa-static": "3",
-    "lru-cache": "4",
-    "vue": "2"
+    "koa-static": "3"
   }
 }

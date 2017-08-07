@@ -10,7 +10,7 @@ export default function(context) {
     store.replaceState(data)
 
     const app = new Vue({
-      ...App,
+      render: h => h(App),
       store
     })
 

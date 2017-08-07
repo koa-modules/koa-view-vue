@@ -8,7 +8,7 @@ export default function(context) {
     const { data } = context
 
     const app = new Vue({
-      ...App,
+      render: h => h(App),
       data() {
         return {
           ...data

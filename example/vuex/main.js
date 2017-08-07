@@ -6,7 +6,7 @@ import Vue from 'vue'
 store.replaceState(window._vue_ssr_data_)
 
 const app = new Vue({
-  ...App,
+  render: h => h(App),
   store
 })
 

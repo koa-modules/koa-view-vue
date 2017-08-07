@@ -9,5 +9,8 @@
   },
   "dependencies": {
     "koa-static": "3"
+  },
+  "devDependencies": {
+    "webpack": "^3.4.1"
   }
 }

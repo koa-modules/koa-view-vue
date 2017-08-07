@@ -1,6 +1,4 @@
 
-## WIP
-
 [![NPM version][npm-img]][npm-url]
 [![Build status][travis-img]][travis-url]
 [![Test coverage][coveralls-img]][coveralls-url]
@@ -8,6 +6,16 @@
 [![Dependency status][david-img]][david-url]
 
 ### koa-view-vue
+
+* A Koa view engine for rendering Vue bundle on server.
+
+### Install
+
+```bash
+npm i koa-view-vue --save
+```
+
+### Usage
 
 * [example](example)
 

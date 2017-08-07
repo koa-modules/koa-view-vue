@@ -23,7 +23,7 @@ app.use(async ctx => {
     return
   }
 
-  await ctx.renderBundle('dist/main', {
+  await ctx.render('dist/main', {
     title: 'hi, vue !',
     fooCount: 99,
     barCount: 98,

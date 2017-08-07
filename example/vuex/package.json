@@ -10,5 +10,8 @@
   "dependencies": {
     "koa-static": "3",
     "vuex": "2"
+  },
+  "devDependencies": {
+    "webpack": "^3.4.1"
   }
 }

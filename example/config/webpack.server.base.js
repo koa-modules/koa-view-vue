@@ -1,5 +1,8 @@
 
+const VueSSRServerPlugin = require('vue-server-renderer/server-plugin')
+const nodeExternals = require('webpack-node-externals')
 const VueSSRPlugin = require('vue-ssr-webpack-plugin')
+const webpack = require('webpack')
 
 module.exports = {
   target: 'node',
@@ -32,10 +35,17 @@ module.exports = {
   performance: {
     hints: false
   },
-  devtool: '#eval-source-map',
+  externals: nodeExternals({
+    whitelist: [/\.(css|vue)$/]
+  }),
   plugins: [
+    new webpack.DefinePlugin({
+      'process.env.VUE_ENV': '"server"'
+    }),
     new VueSSRPlugin({
       filename: 'main.server.json'
-    })
-  ]
+    }),
+    new VueSSRServerPlugin()
+  ],
+  devtool: '#eval-source-map'
 }

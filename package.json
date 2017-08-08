@@ -1,6 +1,6 @@
 {
   "name": "koa-view-vue",
-  "version": "0.0.3",
+  "version": "0.1.0",
   "description": "koa vue template engine",
   "main": "lib/index.js",
   "scripts": {
@@ -38,7 +38,6 @@
     "mocha": "^3.5.0",
     "supertest": "^3.0.0",
     "vue-loader": "^13.0.4",
-    "vue-ssr-webpack-plugin": "^3.0.0",
     "vue-template-compiler": "^2.4.2",
     "webpack": "^3.4.1",
     "webpack-dev-server": "^2.6.1",

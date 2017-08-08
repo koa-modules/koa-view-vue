@@ -1,7 +1,6 @@
 
 const VueSSRServerPlugin = require('vue-server-renderer/server-plugin')
 const nodeExternals = require('webpack-node-externals')
-const VueSSRPlugin = require('vue-ssr-webpack-plugin')
 const webpack = require('webpack')
 
 module.exports = {
@@ -42,10 +41,9 @@ module.exports = {
     new webpack.DefinePlugin({
       'process.env.VUE_ENV': '"server"'
     }),
-    new VueSSRPlugin({
+    new VueSSRServerPlugin({
       filename: 'main.server.json'
-    }),
-    new VueSSRServerPlugin()
+    })
   ],
   devtool: '#eval-source-map'
 }

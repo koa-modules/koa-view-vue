@@ -21,9 +21,9 @@
   "dependencies": {
     "lodash.template": "^4.4.0",
     "lru-cache": "^4.1.1",
-    "mz": "^2.6.0",
-    "vue": "^2.4.2",
-    "vue-server-renderer": "^2.4.2"
+    "mz": "^2.7.0",
+    "vue": "^2.5.2",
+    "vue-server-renderer": "^2.5.2"
   },
   "devDependencies": {
     "babel-core": "^6.25.0",
@@ -38,7 +38,7 @@
     "mocha": "^3.5.0",
     "supertest": "^3.0.0",
     "vue-loader": "^13.0.4",
-    "vue-template-compiler": "^2.4.2",
+    "vue-template-compiler": "^2.5.2",
     "webpack": "^3.4.1",
     "webpack-dev-server": "^2.6.1",
     "webpack-merge": "^4.1.0",

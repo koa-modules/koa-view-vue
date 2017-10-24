@@ -1,6 +1,6 @@
 {
   "name": "koa-view-vue",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "koa vue template engine",
   "main": "lib/index.js",
   "scripts": {
